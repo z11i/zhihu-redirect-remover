@@ -1,21 +1,13 @@
 {
-  "name": "Zhihu Redirect Remover",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "Removes Zhihu redirects of external pages",
+  "content_scripts": [{
+    "js": ["src/inject/inject.js"],
+    "matches": ["*://*.zhihu.com/*"]
+   }],
+  "description": "Removes Zhihu redirection links to speed up and avoid tracking.",
   "homepage_url": "https://github.com/zhongwei-z/zhihu-redirect-remover",
-  "default_locale": "en",
-  "permissions": [
-    "https?:\\/\\/.+zhihu.+"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https?:\\/\\/.+zhihu.+"
-      ],
-      "js": [
-        "src/inject/inject.js"
-      ]
-    }
-  ]
+  "manifest_version": 2,
+  "name": "Zhihu redirect remover",
+  "permissions": ["*://*.zhihu.com/*"],
+  "version": "1.0.0",
+  "author": "zhongwei-z"
 }
