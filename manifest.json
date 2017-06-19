@@ -1,14 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Zhihu Redirect Remover",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
+  "description": "Removes Zhihu redirects of external pages",
+  "homepage_url": "https://github.com/zhongwei-z/zhihu-redirect-remover",
   "default_locale": "en",
   "permissions": [
     "https?:\\/\\/.+zhihu.+"
@@ -16,7 +11,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https?:\\/\\/.+zhihu.+"
       ],
       "js": [
         "src/inject/inject.js"
